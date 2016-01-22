@@ -235,9 +235,29 @@
                             </div>
                             <!-- /input-group -->
                         </li>
+
+                        
+
                         <li>
                             <a href="../pages/index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> MySQL<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="../pages/text_MySQLi.php">MySQLi</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/text_PHPExcel.php">PHPExcel</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/text_fgetcsv.php">fgetcsv()</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li> <!-- MySQL -->  
+
+
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -249,13 +269,15 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>
+                        </li><!-- 統計表 -->  
+
                         <li>
                             <a href="../pages/tables.php"><i class="fa fa-table fa-fw"></i> Tables</a>
                         </li>
                         <li>
                             <a href="../pages/forms.php"><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
+
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -279,7 +301,8 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>
+                        </li><!-- UI 介面設計 -->  
+
                         <li>
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -309,7 +332,8 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>
+                        </li><!-- 菜單導航 範例 -->  
+
                         <li>
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -321,7 +345,7 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>
+                        </li><!-- 簡單頁面 --> 
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
