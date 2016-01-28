@@ -47,8 +47,8 @@
 		
 	}
 	$StrAll = $StrAll."</table>";
-	printf ($StrAll);
-
+	//printf ($StrAll);
+	printf ("<br>".testprintf_query_1($result));/*會組一個 Table 丟出來 失敗丟回null*/
 
 	echo "<br>現在釋放 result。";mysqli_free_result($result);
 	echo "<br>現在關閉 connect。";mysqli_close($con);
@@ -78,7 +78,43 @@
 <br>8. 返回字段指针的当前偏移量
 <br>mysqli_field_tell($result)
 <br>
+<br>9. 取得下一字段，并作为对象返回
+<br>mysqli_fetch_field($result)
+<br>
+<br>10.取得结果中代表字段的对象、返回数组。
+<br>mysqli_fetch_fields($result)
 <br>
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<?php /*function 打包程式 印出mysqli_query */
+	function testprintf_query_1( $result ) {
+		if (!$rowcount=mysqli_num_rows($result)){
+			return "null";
+		}
+			$StrAll = "<table>";
+
+			$fieldinfo=mysqli_fetch_fields($result);
+			foreach ($fieldinfo as $val){
+				$StrAll = $StrAll."<th>". $val->name."</th>";
+			}
+			for($i = 0;$i< $rowcount;$i++ ){
+				if (!mysqli_data_seek ($result, $i)) { printf ("Cannot seek to row %d\n", $i); continue;}
+				if(!($row = mysqli_fetch_array ($result))) {continue;}
+				$StrAll = $StrAll."<tr>";
+					foreach ($fieldinfo as $val){
+						$StrAll = $StrAll."<td>". $row[$val->name]."</td>";
+					}
+				$StrAll = $StrAll."</tr>";
+			}
+			$StrAll = $StrAll."</table>";
+			return $StrAll;
+	} 
+?><br>
