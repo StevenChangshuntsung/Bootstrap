@@ -245,7 +245,10 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> MySQL<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="../pages/text_MySQLi.php">MySQLi</a>
+                                    <a href="../pages/text_MySQLi.php">MySQLi 輸出</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/text_MySQLi_IN.php">MySQLi 輸入</a>
                                 </li>
                                 <li>
                                     <a href="../pages/text_PHPExcel.php">PHPExcel</a>
