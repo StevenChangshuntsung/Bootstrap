@@ -273,10 +273,19 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li><!-- 統計表 -->  
-
                         <li>
-                            <a href="../pages/tables.php"><i class="fa fa-table fa-fw"></i> Tables</a>
-                        </li>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Table<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="../pages/tables.php">Tables</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/Test_datatables.php">Test_datatables</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li><!-- table -->  
+
                         <li>
                             <a href="../pages/forms.php"><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
