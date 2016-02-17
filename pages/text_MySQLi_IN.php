@@ -1,4 +1,27 @@
-<?php
+<?php /*有包過的*/
+include './inc/funGetData.php';
+
+$con = funGetData\get_conn();
+// $sql = "INSERT INTO `test`.`table 4` (`tab3id`, `col_INT`, `col_VARCHAR`, `col_TEXT`, `col_DATE`, `col_TIME`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL);";
+
+//test_mysqli_query($con, $sql);
+$dbSQL = array(
+        "tab3id" => "NULL",
+        "col_INT" => "NULL",
+        "col_VARCHAR" => "NULL",
+        "col_TEXT" => "NULL",
+        "col_DATE" => "NULL",
+        "col_TIME" => "NULL",
+        );
+funGetData\get_IN($dbSQL,"table 4");
+mysqli_close($con);
+
+?>
+
+<br><br>
+
+
+<?php /*沒有包過的*/
     // $con=mysqli_connect("localhost","my_user","my_password","my_db");
     $con=mysqli_connect("127.0.0.1","root","qwe123","test","3306");
 
