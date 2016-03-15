@@ -13,9 +13,24 @@ $dbSQL = array(
         "col_DATE" => "NULL",
         "col_TIME" => "NULL",
         );
-funGetData\get_IN($dbSQL,"table 4");
-mysqli_close($con);
+//funGetData\sen_dbINArray($dbSQL,"table 4");
 
+
+$dbSQL2 = array(
+        "gameid" => "01",
+        );
+funGetData\sen_dbIN($dbSQL2,"game");
+
+
+
+
+
+
+
+
+
+
+mysqli_close($con);
 ?>
 
 <br><br>

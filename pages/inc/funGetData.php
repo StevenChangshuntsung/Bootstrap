@@ -27,7 +27,26 @@ $con = get_conn();
 mysqli_close($con);
 */
 
-function get_IN($dbSQLArray, $dbtable, $con2) { 
+function sen_dbDel($dbSQLArray, $dbtable, $con2) { 
+
+}
+
+
+function sen_dbUp($dbSQLArray, $dbtable, $con2) { 
+
+}
+function sen_dbUpArray($dbSQLArray, $dbtable, $con2) { 
+
+}
+
+
+
+
+function sen_dbIN($dbSQLArray, $dbtable, $con2) { 
+
+}
+
+function sen_dbINArray($dbSQLArray, $dbtable, $con2) { 
 	$dbcol="";$dbval="";
 	global $dbSource;
 	foreach ($dbSQLArray as $key => $val) {
@@ -98,4 +117,21 @@ function test_mysqli_query($con,$sql) {
 	    }
     } 
 
-}?>
+}
+
+
+// get_conn() 
+
+// sen_dbDel($dbSQLArray, $dbtable, $con2) 
+
+// sen_dbUp($dbSQLArray, $dbtable, $con2) 
+// sen_dbUpArray($dbSQLArray, $dbtable, $con2) 
+
+// sen_dbIN($dbSQLArray, $dbtable, $con2) 
+// sen_dbINArray($dbSQLArray, $dbtable, $con2) 
+
+// get_dbvalu($con,$sql) 
+// get_dbvaluArray($con,$sql) 
+
+// test_mysqli_query($con,$sql)
+?>
