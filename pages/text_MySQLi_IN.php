@@ -13,13 +13,9 @@ $dbSQL = array(
         "col_DATE" => "NULL",
         "col_TIME" => "NULL",
         );
-//funGetData\sen_dbINArray($dbSQL,"table 4");
+funGetData\sen_dbINArray($dbSQL,"table 4");
 
 
-$dbSQL2 = array(
-        "gameid" => "01",
-        );
-funGetData\sen_dbIN($dbSQL2,"game");
 
 
 
