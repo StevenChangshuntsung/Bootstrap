@@ -6,9 +6,12 @@ include '../../iOpIn/iOpIn.php';
 		return $StrAll;
 	} 
 
-	function sen_dbDel($dbSQLArray, $dbtable, $con2) { 
-
-	}
+	function sen_dbDel($dbtable, $dbSQLWHEREA, $con2) { 
+		global $dbSource;
+		$sql = "DELETE FROM `".$dbSource["dbname"]."`.`$dbtable`  $dbSQLWHEREA  ";
+		// echo $sql ;
+		test_mysqli_query($con2, $sql);
+	} 
 
 	function sen_dbUp($sql, $newValue, $con) { 
 		$result=mysqli_query($con,$sql);
@@ -41,15 +44,28 @@ include '../../iOpIn/iOpIn.php';
 	} 
 
 	
-	function sen_dbUpArray($dbSQLArray, $dbtable, $con2) { 
-
+	function sen_dbUpArray($dbSQLArray, $dbtable, $dbSQLWHEREA, $con2) { 
+		$dbcol="";$dbval="";
+		global $dbSource;
+		foreach ($dbSQLArray as $key => $val) {
+			$dbval .= "`$key` = '$val', ";
+		}
+		foreach ($dbSQLWHEREArray as $key => $val) {
+			$sqlwhere .= "`$key` = '$val', ";
+		}
+		$sql = "UPDATE `".$dbSource["dbname"]."`.`".$dbtable."` "." SET ";
+		$sql .= trim($dbval, ", ");
+		$sql .= $dbSQLWHEREA;
+		// $sql .= " WHERE `table 4`.`tab3id` = 1 ";
+		echo $sql;
+		test_mysqli_query($con2, $sql);
 	}
 
-
+//UPDATE `test`.`table 4` SET `col_INT` = '0', `col_VARCHAR` = '0', `col_TEXT` = '0' WHERE `table 4`.`tab3id` = 1;
 
 
 	function sen_dbIN($dbSQLArray, $dbtable, $con2) { 
-/*只塞一個值 意味其他欄位的值 都是NULL*/
+/*只新增一個值 意味其他欄位的值 都是NULL*/
 	}
 
 	function sen_dbINArray($dbSQLArray, $dbtable, $con2) { 
