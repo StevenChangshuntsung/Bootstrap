@@ -1,10 +1,9 @@
 <?php  
-namespace dbMySQLi\ovCS { 
 	/*消耗*/
-	function dbMySQLi_test($StrAll) { 
+	function dbMySQLi_ovCS($StrAll) { 
 		return $StrAll;
 	} 
-	function get_ShowColumns($dbtable, $con) { 
+	function test_get_ShowColumns($dbtable, $con) { 
 		$sql = "";
 		$sql .= "SHOW COLUMNS FROM `$dbtable`";
 		$result=mysqli_query($con,$sql);
@@ -16,5 +15,4 @@ namespace dbMySQLi\ovCS {
 		}
 		printf("</table>");
 	}
-}
 ?>

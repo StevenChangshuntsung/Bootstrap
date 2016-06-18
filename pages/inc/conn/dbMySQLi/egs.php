@@ -1,19 +1,16 @@
 <?php  
-namespace dbMySQLi\ovWP\egs { 
 include '../../iOpIn/iOpIn.php'; 
 	/*egs*/
-	function dbMySQLi_test($StrAll) { 
-		return $StrAll;
-	} 
 
-	function sen_dbDel($dbtable, $dbSQLWHEREA, $con2) { 
-		global $dbSource;
-		$sql = "DELETE FROM `".$dbSource["dbname"]."`.`$dbtable`  $dbSQLWHEREA  ";
+
+	function test_sen_dbDel($dbtable, $dbSQLWHEREA, $con2) { 
+		global $conn_dbSource;
+		$sql = "DELETE FROM `".$conn_dbSource["dbname"]."`.`$dbtable`  $dbSQLWHEREA  ";
 		// echo $sql ;
 		test_mysqli_query($con2, $sql);
 	} 
 
-	function sen_dbUp($sql, $newValue, $con) { 
+	function test_sen_dbUp($sql, $newValue, $con) { 
 		$result=mysqli_query($con,$sql);
 		if (!$rowcount=mysqli_num_rows($result)){
 	            return "null";
@@ -44,43 +41,43 @@ include '../../iOpIn/iOpIn.php';
 	} 
 
 	
-	function sen_dbUpArray($dbSQLArray, $dbtable, $dbSQLWHEREA, $con2) { 
+	function test_sen_dbUpArray($dbSQLArray, $dbtable, $dbSQLWHEREA, $con2) { 
 		$dbcol="";$dbval="";
-		global $dbSource;
+		global $conn_dbSource;
 		foreach ($dbSQLArray as $key => $val) {
 			$dbval .= "`$key` = '$val', ";
 		}
 		foreach ($dbSQLWHEREArray as $key => $val) {
 			$sqlwhere .= "`$key` = '$val', ";
 		}
-		$sql = "UPDATE `".$dbSource["dbname"]."`.`".$dbtable."` "." SET ";
+		$sql = "UPDATE `".$conn_dbSource["dbname"]."`.`".$dbtable."` "." SET ";
 		$sql .= trim($dbval, ", ");
 		$sql .= $dbSQLWHEREA;
 		// $sql .= " WHERE `table 4`.`tab3id` = 1 ";
-		echo $sql;
+		// echo $sql;
 		test_mysqli_query($con2, $sql);
 	}
 
 //UPDATE `test`.`table 4` SET `col_INT` = '0', `col_VARCHAR` = '0', `col_TEXT` = '0' WHERE `table 4`.`tab3id` = 1;
 
 
-	function sen_dbIN($dbSQLArray, $dbtable, $con2) { 
+	function test_sen_dbIN($dbSQLArray, $dbtable, $con2) { 
 /*只新增一個值 意味其他欄位的值 都是NULL*/
 	}
 
-	function sen_dbINArray($dbSQLArray, $dbtable, $con2) { 
+	function test_sen_dbINArray($dbSQLArray, $dbtable, $con2) { 
 		$dbcol="";$dbval="";
-		global $dbSource;
+		global $conn_dbSource;
 		foreach ($dbSQLArray as $key => $val) {
 			$dbcol .= "`$key`, ";
 			$dbval .= "$val, ";
 		}
-		$sql = "INSERT INTO `".$dbSource["dbname"]."`.`".$dbtable."` (".trim($dbcol, ", ").") VALUES (".trim($dbval, ", ").");";
+		$sql = "INSERT INTO `".$conn_dbSource["dbname"]."`.`".$dbtable."` (".trim($dbcol, ", ").") VALUES (".trim($dbval, ", ").");";
 
 		test_mysqli_query($con2, $sql);
 	}
 
-	function get_dbvalu($sql, $con) { 
+	function test_get_dbvalu($sql, $con) { 
 		$result=mysqli_query($con,$sql);
 		if (!$rowcount=mysqli_num_rows($result)){
 	            return "null";
@@ -97,7 +94,7 @@ include '../../iOpIn/iOpIn.php';
 		return $StrAll;
 	} 
 
-	function get_dbvaluArray($sql,$con,$arrType) { 
+	function test_get_dbvaluArray($sql,$con,$arrType) { 
 		$result=mysqli_query($con,$sql);
 		if (!$rowcount=mysqli_num_rows($result)){
 	            return "null";
@@ -138,5 +135,4 @@ include '../../iOpIn/iOpIn.php';
     	msg_mysqli_query($con);
     } 
 
-}
 ?>

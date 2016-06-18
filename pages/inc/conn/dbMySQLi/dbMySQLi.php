@@ -1,9 +1,8 @@
 <?php
-namespace dbMySQLi { 
 include './ovAPP.php';
 include './ovCS.php';
 include './ovWP.php';  
-$dbSource = array(
+$conn_dbSource = array(
 	    "host" => "127.0.0.1",
 	    "username" => "root",
 	    "password" => "qwe123",
@@ -14,83 +13,83 @@ $dbSource = array(
 //***ovCS***
 function get_ShowColumns($dbtable, $con2) { 
 	if(!$con2){
-		$con2 = ovWP\wps\get_conn();
-		ovCS\get_ShowColumns($dbtable, $con2);
+		$con2 = get_conn();
+		test_get_ShowColumns($dbtable, $con2);
 		mysqli_close($con2);
 	}else{
-		ovCS\get_ShowColumns($dbtable, $con2);
+		test_get_ShowColumns($dbtable, $con2);
 	}
 }
 //***ovCS***
-//***egs***
+
+
+// //***egs***
 function sen_dbINArray($dbSQLArray, $dbtable, $con2) { 
 	if(!$con2){
-		$con2 = ovWP\wps\get_conn();
-		ovWP\egs\sen_dbINArray($dbSQLArray, $dbtable, $con2 );
+		$con2 = get_conn();
+		test_sen_dbINArray($dbSQLArray, $dbtable, $con2 );
 		mysqli_close($con2);
 	}else{
-		ovWP\egs\sen_dbINArray($dbSQLArray, $dbtable, $con2 );
+		test_sen_dbINArray($dbSQLArray, $dbtable, $con2 );
 	}
 
 }
 function get_dbvalu($sql, $con2) { 
 	if(!$con2){
-		$con2 = ovWP\wps\get_conn();
-		return ovWP\egs\get_dbvalu($sql, $con2);
+		$con2 = get_conn();
+		return test_get_dbvalu($sql, $con2);
 		mysqli_close($con2);
 	}else{
-		return ovWP\egs\get_dbvalu($sql, $con2);
+		return test_get_dbvalu($sql, $con2);
 	}
 
 }
 function get_dbvaluArray($sql, $con2, $arrType) { 
 	if(!$con2){
-		$con2 = ovWP\wps\get_conn();
-		return ovWP\egs\get_dbvaluArray($sql,$con2,$arrType);
+		$con2 = get_conn();
+		return test_get_dbvaluArray($sql,$con2,$arrType);
 		mysqli_close($con2);
 	}else{
-		return ovWP\egs\get_dbvaluArray($sql,$con2,$arrType);
+		return test_get_dbvaluArray($sql,$con2,$arrType);
 	}
 
 }
 function sen_dbUp($sql, $newValue, $con) { 
 	if(!$con2){
-		$con2 = ovWP\wps\get_conn();
-		return ovWP\egs\sen_dbUp($sql, $newValue, $con2);
+		$con2 = get_conn();
+		return test_sen_dbUp($sql, $newValue, $con2);
 		mysqli_close($con2);
 	}else{
-		return ovWP\egs\sen_dbUp($sql, $newValue, $con2);
+		return test_sen_dbUp($sql, $newValue, $con2);
 	}
 
 }
 function sen_dbUpArray($dbSQLArray, $dbtable, $dbSQLWHEREA, $con2) { 
 	if(!$con2){
-		$con2 = ovWP\wps\get_conn();
-		ovWP\egs\sen_dbUpArray($dbSQLArray, $dbtable, $dbSQLWHEREA, $con2);
+		$con2 = get_conn();
+		test_sen_dbUpArray($dbSQLArray, $dbtable, $dbSQLWHEREA, $con2);
 		mysqli_close($con2);
 	}else{
-		ovWP\egs\sen_dbUpArray($dbSQLArray, $dbtable, $dbSQLWHEREA, $con2);
+		test_sen_dbUpArray($dbSQLArray, $dbtable, $dbSQLWHEREA, $con2);
 	}
 
 }
 function sen_dbDel($dbtable, $dbSQLWHEREA, $con2) { 
 	if(!$con2){
-		$con2 = ovWP\wps\get_conn();
-		return ovWP\egs\sen_dbDel($dbtable, $dbSQLWHEREA, $con2);
+		$con2 = get_conn();
+		return test_sen_dbDel($dbtable, $dbSQLWHEREA, $con2);
 		mysqli_close($con2);
 	}else{
-		return ovWP\egs\sen_dbDel($dbtable, $dbSQLWHEREA, $con2);
+		return test_sen_dbDel($dbtable, $dbSQLWHEREA, $con2);
 	}
 
 }
 //***egs***
 echo "<br>";
-echo ovAPP\dbMySQLi_test("外觀");
-echo ovCS\dbMySQLi_test("消耗");
-echo ovWP\dbMySQLi_test("武器");
+echo dbMySQLi_ovAPP("。ovAPP。");
+echo dbMySQLi_ovCS("。ovCS。");
+echo dbMySQLi_ovWP("。ovWP。");
 echo "<br>";
-echo ovWP\egs\dbMySQLi_test("egs");
-echo ovWP\wps\dbMySQLi_test("wps");
 
 
 
@@ -100,7 +99,7 @@ echo ovWP\wps\dbMySQLi_test("wps");
 
 
 //範例
-$con = ovWP\wps\get_conn();
+// $con = get_conn();
 
 /*/***sen_dbINArray***/
 
@@ -144,7 +143,7 @@ $con = ovWP\wps\get_conn();
 
 // $sql = "SELECT  gamevalue FROM `game`  where gamekey = 214";
 // echo "<br>範例:sen_dbUp:";
-// echo "<br>".sen_dbUp($sql,"214");
+// echo "<br>".sen_dbUp($sql,"215");
 /***sen_dbUp***/
 
 /*/***sen_dbUpArray***/
@@ -192,8 +191,7 @@ $con = ovWP\wps\get_conn();
 
 
 
-mysqli_close($con);
+// mysqli_close($con);
 
 
-}
 ?>
