@@ -285,6 +285,15 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li><!-- table -->  
+                        <li>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Schedule<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="../pages/weizmannSchedule.php">weizmannSchedule</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li><!-- table -->  
 
                         <li>
                             <a href="../pages/forms.php"><i class="fa fa-edit fa-fw"></i> Forms</a>
