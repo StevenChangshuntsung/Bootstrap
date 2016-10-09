@@ -1,5 +1,5 @@
 <?php
-include './conn/conn.php'
+include 'C:\htdocs\Bootstrap\pages\inc\conn\conn.php';
 
 
 ?>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     // $con=mysqli_connect("localhost","my_user","my_password","my_db");
-    $con=mysqli_connect("127.0.0.1","root","qwe123","test","3306");
+    $con=mysqli_connect("127.0.0.1","cst","123456","test","3306");
 
     // Check connection
     if (mysqli_connect_errno($con))

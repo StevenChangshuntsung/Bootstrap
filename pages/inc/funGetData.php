@@ -2,8 +2,8 @@
 namespace funGetData { 
 $dbSource = array(
 	    "host" => "127.0.0.1",
-	    "username" => "root",
-	    "password" => "qwe123",
+	    "username" => "cst",
+	    "password" => "123456",
 	    "dbname" => "test",
 	    "port" => "3306",
 	    "socket" => "",
