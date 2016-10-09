@@ -1,3 +1,10 @@
+<?php
+include 'C:\htdocs\Bootstrap\pages\inc\inc.php';
+$con = new conInv();
+$con->tesst();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
