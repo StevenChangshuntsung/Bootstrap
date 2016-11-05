@@ -5,7 +5,7 @@
 class webs
 {
 	
-	$conn_dbSource = array("host" => "mysql.hostinger.com.hk",
+	public $conn_dbSource = array("host" => "mysql.hostinger.com.hk",
         "username" => "u896825658_root", "password" => "23480956",
         "dbname" => "u896825658_test",
         "port" => "3306", "socket" => "");
