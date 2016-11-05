@@ -41,14 +41,22 @@ $("#anext").click(function(event) {
         alert("先點選擇按鈕");
     } else {
 
-        $("#wsShow")[0].target = "_blank";
-        $("#wsShow")[0].action = "weizmannScheduleincdo.php";
-        $("#wsShow").submit();
+        // $("#wsShow")[0].target = "_blank";
+        // $("#wsShow")[0].action = "weizmannScheduleincdo.php";
+        // $("#wsShow").submit();
         // $("#wsShow")[0].target = "";
         // $("#wsShow")[0].action = "";
 
         // location.assign('weizmannSchedule.php');
 
+        $("#NextPost").load('weizmannScheduleincdo.php',{
+        Speed: $("#Speed").val(), maxTr: $("#maxTr").val()} ,
+        	function(){
+        	/* Stuff to do after the page is loaded */
+        });
+        
+
+        $(this).attr('disabled', true);
 
 
     }

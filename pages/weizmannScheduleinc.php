@@ -172,3 +172,4 @@ do {
         </table>
     </div>
 </div>
+<div id="NextPost"></div>
