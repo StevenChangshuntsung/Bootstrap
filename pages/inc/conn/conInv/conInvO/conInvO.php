@@ -5,19 +5,8 @@
  */
 trait connection
 {
-    //======屬性
-    public $conn_dbSource = array(
-        "host" => "127.0.0.1",
-        "username" => "cst",
-        "password" => "123456",
-        "dbname" => "dbcst",
-        "port" => "3306",
-        "socket" => "",
-        );
-
     //======方法
-    public function conn() {
-        $conn_dbSource = $this->conn_dbSource;
+    public function conn($conn_dbSource) {
         $con=mysqli_connect($conn_dbSource["host"],$conn_dbSource["username"],$conn_dbSource["password"],$conn_dbSource["dbname"],$conn_dbSource["port"]);
 
         if (mysqli_connect_errno($con))

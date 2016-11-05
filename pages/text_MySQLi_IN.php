@@ -1,10 +1,6 @@
 <?php
 include dirname(__file__).'/inc/inc.php';
-
-
 ?>
-
-
 
 <?php 
     echo(memory_get_usage(true).'<br>');
@@ -12,7 +8,7 @@ include dirname(__file__).'/inc/inc.php';
     $a = new conInv();
     $a->tesst();
 
-    $con = $a->conn();
+    $con = $a->conn($conn_dbSource);
 
     echo(memory_get_usage().'<br>');
 
