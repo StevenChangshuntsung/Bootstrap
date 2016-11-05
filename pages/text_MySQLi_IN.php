@@ -1,5 +1,5 @@
 <?php
-include dirname(__file__).'./inc/inc.php';
+include dirname(__file__).'/inc/inc.php';
 
 
 ?>
