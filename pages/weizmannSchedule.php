@@ -43,7 +43,7 @@ namespace weizmannSchedule;
         <?php include("../topbar/navigation.php"); ?>
         <!-- Page Content -->
         <div id="page-wrapper">
-            <?php include '.\weizmannScheduleinc.php';?>
+            <?php include dirname(__file__).'/weizmannScheduleinc.php';?>
         </div>
         <!-- /#page-wrapper -->
     </div>
