@@ -1,5 +1,5 @@
 <?php
-include 'C:\htdocs\Bootstrap\pages\inc\inc.php';
+include dirname(__file__).'./inc/inc.php';
 
 
 ?>

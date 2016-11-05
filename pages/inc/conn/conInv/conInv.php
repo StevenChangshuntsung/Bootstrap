@@ -1,5 +1,5 @@
 <?php
-include 'C:\htdocs\Bootstrap\pages\inc\conn\conInv\conInvO\conInvO.php';
+include dirname(__file__).'/conInvO/conInvO.php';
 /**
  * conn
  */
