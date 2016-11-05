@@ -5,8 +5,12 @@
  */
 trait connection
 {
+    public $conn_dbSource = array();
+
     //======方法
-    public function conn($conn_dbSource) {
+    public function conn() {
+        $conn_dbSource = $this->conn_dbSource;
+
         $con=mysqli_connect($conn_dbSource["host"],$conn_dbSource["username"],$conn_dbSource["password"],$conn_dbSource["dbname"],$conn_dbSource["port"]);
 
         if (mysqli_connect_errno($con))

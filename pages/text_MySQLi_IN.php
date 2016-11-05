@@ -5,10 +5,9 @@ include dirname(__file__).'/inc/inc.php';
 <?php 
     echo(memory_get_usage(true).'<br>');
     echo '<br>';
-    $a = new conInv();
-    $a->tesst();
+    $conInv->tesst();
 
-    $con = $a->conn($conn_dbSource);
+    $con = $conInv->conn();
 
     echo(memory_get_usage().'<br>');
 
@@ -16,10 +15,11 @@ include dirname(__file__).'/inc/inc.php';
 
     //$a::test_query($con,$sql);
     /*Deprecated: Non-static method conInv::errMsg_query()    
-    以棄用$a::test_query()  改用  $a->test_query()*/
-    $a->test_query($con,$sql);
+    已用$a::test_query()  改用  $a->test_query()*/
+    $conInv->test_query($con,$sql);
 
-    $a->close($con);
+    $conInv->close($con);
+    echo(memory_get_usage().'<br>');
 
 
 
