@@ -1,3 +1,10 @@
+<?php
+include dirname(__file__).'/inc/inc.php';
+$con = new conInv();
+$con->tesst();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

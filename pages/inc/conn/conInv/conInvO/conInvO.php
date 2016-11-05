@@ -63,7 +63,7 @@ trait connection_close
     }
     public function tesst()
     {
-        echo "tesst";
+        echo "connection_close>tesst";
     }
 }
 ?>

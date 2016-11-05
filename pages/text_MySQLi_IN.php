@@ -1,5 +1,5 @@
 <?php
-include 'C:\htdocs\Bootstrap\pages\inc\inc.php';
+include dirname(__file__).'./inc/inc.php';
 
 
 ?>
@@ -12,15 +12,18 @@ include 'C:\htdocs\Bootstrap\pages\inc\inc.php';
     $a = new conInv();
     $a->tesst();
 
-    // $con = $a->conn();
+    $con = $a->conn();
 
-    // echo(memory_get_usage().'<br>');
+    echo(memory_get_usage().'<br>');
 
-    // $sql = "INSERT INTO"." `ccode` ( `Enab`, `group1`) VALUES ( '1', '01' )";
+    $sql = "INSERT INTO"." `ccode` ( `Enab`, `group1`) VALUES ( '1', '01' )";
 
-    // $a::test_query($con,$sql);
+    //$a::test_query($con,$sql);
+    /*Deprecated: Non-static method conInv::errMsg_query()    
+    以棄用$a::test_query()  改用  $a->test_query()*/
+    $a->test_query($con,$sql);
 
-    // $a->close($con);
+    $a->close($con);
 
 
 
