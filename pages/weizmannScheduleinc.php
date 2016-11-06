@@ -25,13 +25,22 @@ function Setspeed($val, $typ)
 if ($Speed_1 != "") {
     $Speed_1 = Setspeed($Speed_1, $Speed_type);
 }else{
-   $Speed_1 = 400;
+   $Speed_1 = rand(400, 1000);
 }
 if ($Speed_2 != "") {
     $Speed_2 = Setspeed($Speed_2, $Speed_type);
 }else{
-   $Speed_2 = 500;
+   $Speed_2 = $Speed_1 + 100;
 }
+
+?>
+
+<?php
+
+
+// for ($i = 1; $i <= 10; $i++) {
+//     echo rand(400, 1000)."\n";
+// }
 
 ?>
 

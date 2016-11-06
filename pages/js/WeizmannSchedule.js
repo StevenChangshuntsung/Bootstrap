@@ -1,4 +1,4 @@
-// $(".wsShow").hide();
+$(".wsShow").hide();
 
 
 $("#afresh, #anext").addClass('btn-danger');
@@ -49,12 +49,14 @@ $("#anext").click(function(event) {
 
         // location.assign('weizmannSchedule.php');
 
-        $("#NextPost").load('weizmannScheduleincdo.php',{
-        Speed: $("#Speed").val(), maxTr: $("#maxTr").val()} ,
-        	function(){
-        	/* Stuff to do after the page is loaded */
-        });
-        
+        $("#NextPost").load('weizmannScheduleincdo.php', {
+                Speed: $("#Speed").val(),
+                maxTr: $("#maxTr").val()
+            },
+            function() {
+                /* Stuff to do after the page is loaded */
+            });
+
 
         $(this).attr('disabled', true);
 
@@ -71,4 +73,24 @@ $("#Speed_H").click(function(event) {
 $("#Speed_S").click(function(event) {
     $("#Speed_type").val("Speed_S");
     $("#wsShow").submit();
+});
+
+
+
+/*隨機TR*/
+$("#TrAccordion, #TrAccordion2").children('tr').each(function(index, el) {
+	var trcss = $(this);
+    $(this).children('td').each(function(index, el) {
+        if (index == 0) {
+            // console.log($(this).html());
+            var maxNum = 10;
+            var minNum = 0;
+            var n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+            if (n>8) {
+                trcss.attr('style','background-color:red;');
+            }
+
+
+        }
+    });
 });
