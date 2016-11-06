@@ -25,7 +25,7 @@ function Setspeed($val, $typ)
 if ($Speed_1 != "") {
     $Speed_1 = Setspeed($Speed_1, $Speed_type);
 }else{
-   $Speed_1 = rand(400, 1000);
+   $Speed_1 = rand(100, 600);
 }
 if ($Speed_2 != "") {
     $Speed_2 = Setspeed($Speed_2, $Speed_type);
@@ -93,7 +93,7 @@ if ($Speed_2 != "") {
 </div>
 <br>
 <br>
-<div class="row">
+<div class="row" id="divHeight">
     <div class="col-lg-6">
         <button class="btn btn-outline btn-default" id="choose_1">選擇</button>
         <table class="table">
