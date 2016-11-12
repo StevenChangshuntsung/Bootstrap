@@ -355,6 +355,36 @@
                             <!-- /.nav-second-level -->
                         </li><!-- 菜單導航 範例 -->  
 
+
+                        <li>
+                            <a href="#"><i class="fa fa-stethoscope fa-fw"></i> 其它<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">工具 <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="../Othertools/getserver.php">IP檢測</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Othertools/table_server.php">_SERVER 訊息</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">NaN</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">NaN</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">NaN</a>
+                                </li>
+                                <li>
+                                    <a href="#">NaN</a>
+                                </li>
+                            </ul>
+                        </li><!-- 其它 --> 
+
                         <li>
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
